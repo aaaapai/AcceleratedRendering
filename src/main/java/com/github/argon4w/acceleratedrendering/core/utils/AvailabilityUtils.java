@@ -18,25 +18,8 @@ public class AvailabilityUtils {
 			return false;
 		}
 
-		var cap = GL.createCapabilities();
-
 		CACHED = true;
 
-		AVAILABILITY =	cap.GL_ARB_shader_image_load_store
-				&&		cap.GL_ARB_sync
-				&&		cap.GL_ARB_direct_state_access
-				&&		cap.GL_ARB_compute_shader
-				&&		cap.GL_ARB_buffer_storage
-				&&		cap.GL_ARB_shader_atomic_counters;
-
-		var renderer = GL11.glGetString(GL11.GL_RENDERER);
-
-		if (renderer != null) {
-			AVAILABILITY &=	!renderer.contains("MobileGlues")
-					&&		!renderer.contains("gl4es")
-					&&		!renderer.contains("LTW");
-		}
-
-		return AVAILABILITY;
+		return true;
 	}
 }
