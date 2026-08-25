@@ -20,8 +20,5 @@ public class CoreGameEvents {
 
 	@SubscribeEvent
 	public static void onClientPlayerLoggedIn(ClientPlayerNetworkEvent.LoggingIn event) {
-		if (!AvailabilityUtils.isAvailable()) {
-			event.getPlayer().displayClientMessage(Component.translatable("acceleratedrendering.component.not_available").withStyle(ChatFormatting.DARK_RED, ChatFormatting.BOLD), false);
-		}
 	}
 }
