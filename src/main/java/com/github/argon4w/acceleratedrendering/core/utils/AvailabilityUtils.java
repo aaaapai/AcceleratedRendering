@@ -14,10 +14,6 @@ public class AvailabilityUtils {
 			return AVAILABILITY;
 		}
 
-		if (!RenderSystem.isOnRenderThreadOrInit()) {
-			return false;
-		}
-
 		CACHED = true;
 
 		return true;
