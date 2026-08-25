@@ -15,6 +15,7 @@ public class AvailabilityUtils {
 		}
 
 		CACHED = true;
+		AVAILABILITY = true;
 
 		return true;
 	}
